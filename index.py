@@ -19,7 +19,7 @@ def handler(event, context):
         data = {
             'output': 'Hello World',
             'events': event,
-            # 'context': context,
+            'context': context,
             'timestamp': datetime.datetime.utcnow().isoformat(),
             'objects': objects
         }
