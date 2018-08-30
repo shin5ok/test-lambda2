@@ -18,17 +18,17 @@ def handler(event, context):
 
         data = {
             'output': 'Hello World',
-            'events': event,
-            'context': context,
+            'events': json.dumps(event),
+            'context': json.dumps(context),
             'timestamp': datetime.datetime.utcnow().isoformat(),
             'objects': objects
         }
     except:
         pass
     rdata ={'statusCode': 200,
-            'body': json.dumps(data),
+            'body': data,
             'headers': {'Content-Type': 'application/json'}}
-    print(rdata)
+    # print(rdata)
     return rdata
 
 # print(handler({}, {}))
