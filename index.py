@@ -28,9 +28,10 @@ def handler(event, context):
     rdata ={'statusCode': 200,
             'body': json.dumps(data),
             'headers': {'Content-Type': 'application/json'}}
+    print(rdata)
     return rdata
 
-
+# print(handler({}, {}))
 
 # if __name__ == '__main__':
 #     print(handler(None, None))
